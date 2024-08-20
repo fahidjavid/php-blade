@@ -5,14 +5,9 @@ require 'Database.php';
 //require 'router.php';
 
 
-$config = [
-	'host'    => 'localhost',
-	'port'    => 3306,
-	'dbname'  => 'myapp',
-	'charset' => 'utf8mb4'
-];
+$config = require_once "config.php";
 
-$db    = new Database($config);
+$db    = new Database( $config['database'] );
 $posts = $db->query( "select * from posts" )->fetchAll( PDO::FETCH_ASSOC );
 
 foreach ( $posts as $post ) {
