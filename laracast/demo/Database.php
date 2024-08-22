@@ -4,6 +4,7 @@
 class Database {
 
 	public $connection;
+	public $statement;
 
 	public function __construct( $config, $username = 'root', $password = '' ) {
 
@@ -16,9 +17,39 @@ class Database {
 
 	public function query( $query, $params = [] ) {
 
-		$statement = $this->connection->prepare( $query );
-		$statement->execute($params);
+		$this->statement = $this->connection->prepare( $query );
+		$this->statement->execute($params);
 
-		return $statement;
+		return $this;
 	}
+
+	public function get(){
+		return $this->statement->fetch();
+	}
+
+	public function getAll(){
+		return $this->statement->fetchAll();
+	}
+
+	public function getOrFail(){
+		$result = $this->get();
+
+		if ( ! $result ) {
+			abort();
+		}
+
+		return $result;
+	}
+
+	public function getOrAllFail(){
+		$result = $this->getAll();
+
+		if ( ! $result ) {
+			abort();
+		}
+
+		return $result;
+	}
+
+
 }
