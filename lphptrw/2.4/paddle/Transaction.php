@@ -1,7 +1,7 @@
 <?php
 declare( strict_types = 1 );
 
-namespace Paddle\Transaction;
+namespace GateWay\Paddle;
 
 class Transaction {
 	public function __construct() {
