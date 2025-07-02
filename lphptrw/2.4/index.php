@@ -15,6 +15,8 @@ require_once "paddle/Transaction.php";
 // OR
 
 use \GateWay\Paddle\Transaction as PaddleTransaction;
+use \GateWay\Stripe\Transaction as StripeTransaction;
 
 new PaddleTransaction();
+new StripeTransaction();
 
