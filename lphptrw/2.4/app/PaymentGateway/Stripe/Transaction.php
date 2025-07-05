@@ -1,10 +1,10 @@
 <?php
 declare( strict_types = 1 );
 
-namespace GateWay\Paddle;
+namespace App\PaymentGateway\Stripe;
 
 class Transaction {
 	public function __construct() {
-		echo 'Paddle transaction class initialized.';
+		echo 'Stripe transaction class initialized.';
 	}
 }
