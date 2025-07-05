@@ -16,7 +16,14 @@ require_once "paddle/Transaction.php";
 
 use \GateWay\Paddle\Transaction as PaddleTransaction;
 use \GateWay\Stripe\Transaction as StripeTransaction;
-
+//
 new PaddleTransaction();
 new StripeTransaction();
+
+
+require __DIR__ . '/vendor/autoload.php';
+
+$uuid =  new \Ramsey\Uuid\UuidFactory();
+
+echo $uuid->uuid4()->toString() . PHP_EOL;
 
