@@ -5,8 +5,20 @@ declare( strict_types = 1 );
 
 require __DIR__ . '/vendor/autoload.php';
 
-use \App\PaymentGateway\Paddle\Transaction as PaddleTransaction;
 
-$transaction = new PaddleTransaction( 25 );
+$toaster = new \App\Toaster();
 
-$transaction->process();
+$toaster->addSlide( 'Bread' );
+$toaster->addSlide( 'Bread' );
+
+$toaster->toast();
+
+
+$toasterPro = new \App\ToasterPro();
+
+$toasterPro->addSlide( 'Bread' );
+$toasterPro->addSlide( 'Bread' );
+$toasterPro->addSlide( 'Bread' );
+$toasterPro->addSlide( 'Bread' );
+
+$toasterPro->toastBagel();
