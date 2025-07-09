@@ -8,17 +8,14 @@ use App\Enums\Status;
 
 class Transaction {
 
-	private string $status;
+	public float $amount;
 
-	public function __construct() {
+	public function __construct( float $amount ) {
+		$this->amount = $amount;
 	}
 
 
-	public function setStatus( string $status ): void {
-		if ( ! array_key_exists( $status, Status::ALL_STATUSES ) ) {
-			throw new \InvalidArgumentException( "Invalid status: $status" );
-		}
-		$this->status = $status;
-		echo "Status set to: " . Status::ALL_STATUSES[ $status ] . '<br>';
+	public function process(): void {
+		echo 'Processing $' . $this->amount . ' transaction via Paddle.' . PHP_EOL;
 	}
 }
