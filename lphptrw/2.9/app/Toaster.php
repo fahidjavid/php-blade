@@ -14,7 +14,8 @@ class Toaster {
 		}
 	}
 
-	public function toast(): void {
+
+	public function toast_2(): void {
 		foreach ( $this->slices as $i => $slice ) {
 			echo ( $i + 1 ) . ": Toasting: " . $slice . " <br>"  . PHP_EOL;
 		}
