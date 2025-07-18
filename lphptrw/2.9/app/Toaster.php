@@ -6,7 +6,7 @@ class Toaster {
 	public array $slices = [];
 	public int   $size   = 2;
 
-	public function addSlide( string $slice ): void {
+	public function addSlide_2( string $slice ): void {
 		if ( count( $this->slices ) < $this->size ) {
 			$this->slices[] = $slice;
 		} else {
