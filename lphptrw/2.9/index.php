@@ -21,4 +21,4 @@ $toasterPro->addSlide( 'Bread' );
 $toasterPro->addSlide( 'Bread' );
 $toasterPro->addSlide( 'Bread' );
 
-$toasterPro->toastBagel();
+$toasterPro->toastBagel_2();
