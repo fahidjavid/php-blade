@@ -2,6 +2,8 @@
 
 require 'vendor/autoload.php';
 
+session_start();
+
 $router = new App\Router();
 
 $router->get( '/', [ App\Classes\Home::class, 'index' ] )
