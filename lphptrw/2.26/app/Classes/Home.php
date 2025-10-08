@@ -14,6 +14,8 @@ FORM;
 	}
 
 	public function upload(): void {
-		var_dump( $_FILES );
+		echo '<pre>';
+		print_r( $_FILES );
+		echo '</pre>';
 	}
 }
