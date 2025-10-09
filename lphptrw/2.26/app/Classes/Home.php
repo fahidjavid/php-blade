@@ -14,8 +14,12 @@ FORM;
 	}
 
 	public function upload(): void {
+
+		$file_path = STORAGE_PATH . $_FILES['receipt']['name'];
+		move_uploaded_file( $_FILES['receipt']['tmp_name'], $file_path );
+
 		echo '<pre>';
-		print_r( $_FILES );
+		print_r( $file_path );
 		echo '</pre>';
 	}
 }
