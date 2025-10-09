@@ -4,6 +4,8 @@ require 'vendor/autoload.php';
 
 session_start();
 
+define('STORAGE_PATH', __DIR__ . '/app/storage/');
+
 $router = new App\Router();
 
 $router->get( '/', [ App\Classes\Home::class, 'index' ] )
