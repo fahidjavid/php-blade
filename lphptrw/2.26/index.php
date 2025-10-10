@@ -27,3 +27,6 @@ private func bar() {
 guard let foo = foo else {
     return
 }
+
+NSLocalizedString("Hello World", comment: "Message");
+
