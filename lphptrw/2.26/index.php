@@ -23,3 +23,7 @@ try {
 private func bar() {
 
 }
+
+guard let foo = foo else {
+    return
+}
