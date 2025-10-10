@@ -19,8 +19,3 @@ try {
 } catch ( \App\Exceptions\RouteNotFoundException $e ) {
 	echo $e->getMessage();
 }
-
-private func bar() {
-
-}
-
